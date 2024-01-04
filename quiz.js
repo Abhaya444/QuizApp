@@ -17,7 +17,7 @@ questionElement.textContent = questionObj.question;
 
 //To fetch option div
 const optionEl = document.getElementById("options");
-
+//To fetch score 
 const scoreEl = document.getElementById("score");
 
 //Populating the Options div with the buttons
@@ -32,14 +32,23 @@ options.forEach((opt) => {
     if(opt === correctAnswer){
       score ++;
     }else{
-      score = score -0.25;
+      score = score - 0.25;
     }
     console.log(score);
     scoreEl.textContent = `Score: ${score}`;
     questionElement.textContent = "Quiz Completed"
+    optionEl.textContent = "";
   })
 
 })
+//Shuffling the options
+function shuffleOptions(options){
+  for(let i = options.length-1; i>0; i--){
+    const j = 
+  }
+  [options[3],options[0]] =[options[0], options[3]];
+  console.log(options);
+}
 
 
 
