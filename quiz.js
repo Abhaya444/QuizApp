@@ -11,6 +11,7 @@ const questionObj =
 const {correctAnswer, options, question} = questionObj;
 
 let score = 0;
+let currentQuestion = 0;
 
 const questionElement = document.getElementById("question");
 questionElement.textContent = questionObj.question;
@@ -30,25 +31,29 @@ options.forEach((opt) => {
   //Event handling on the button
   btn.addEventListener("click", ()=> {
     if(opt === correctAnswer){
-      score ++;
+      score++;
     }else{
       score = score - 0.25;
     }
     console.log(score);
     scoreEl.textContent = `Score: ${score}`;
-    questionElement.textContent = "Quiz Completed"
-    optionEl.textContent = "";
+    
   })
 
 })
-//Shuffling the options
-function shuffleOptions(options){
-  for(let i = options.length-1; i>0; i--){
-    const j = 
-  }
-  [options[3],options[0]] =[options[0], options[3]];
-  console.log(options);
+
+function nextQuestion(){
+  currentQuestion++;
+
 }
+// //Shuffling the options
+// function shuffleOptions(options){
+//   for(let i = options.length-1; i>0; i--){
+//     const j = 
+//   };
+//   [options[3],options[0]] =[options[0], options[3]];
+//   console.log(options);
+// }
 
 
 
