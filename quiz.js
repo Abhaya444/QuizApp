@@ -109,7 +109,7 @@ function nextQuestion(){
   currentQuestion++;
   optionEl.textContent = '';
   if(currentQuestion >= quesJSON.length){
-    questionElement.textContent = "Quiz Completed";
+    questionElement.textContent = "You have succesfully completed your task.";
     // optionEl.textContent = "";
     nextEl.remove();
   }else{
